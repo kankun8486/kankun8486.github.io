@@ -27,19 +27,28 @@
             margin: 20px 0;
         }
 
-        .icon { 
+        /* Phần thay đổi: Cấu hình cho logo ảnh */
+        .icon-container { 
             width: 80px; height: 80px; 
             background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); 
-            color: white; font-size: 40px; font-weight: 800; 
-            line-height: 80px; border-radius: 20px; 
+            border-radius: 20px; 
             margin: 0 auto 20px; 
             box-shadow: 0 10px 20px rgba(78, 67, 118, 0.2); 
+            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài góc bo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Giúp ảnh khớp với khung hình vuông */
         }
 
         h1 { color: #2c3e50; margin: 0; font-size: 2.2em; font-weight: 800; }
         p.subtitle { color: #636e72; font-size: 1.1em; margin: 10px 0 25px; font-weight: 600; }
         
-        /* Phần chứa mã QR */
         .qr-section {
             background: #f8f9fa;
             padding: 20px;
@@ -90,9 +99,12 @@
 <body>
 
     <div class="card">
-        <div class="icon">J</div>
+        <div class="icon-container">
+            <img src="logo.png" alt="Javien Logo">
+        </div>
+
         <h1>Javien Dict</h1>
-        <p class="subtitle">Tù điển Nhật Việt tra cứu thông minh</p>
+        <p class="subtitle">Từ điển Nhật Việt tra cứu thông minh</p>
 
         <div class="qr-section">
             <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.javien.tudien" alt="QR Code Tải App">
@@ -104,7 +116,7 @@
         </a>
 
         <div class="footer">
-            Hỗ trợ: <a href="mailto:kankun8486@gmail.com">email_cua_ban@gmail.com</a>
+            Hỗ trợ: <a href="mailto:kankun8486@gmail.com">kankun8486@gmail.com</a>
         </div>
     </div>
 
