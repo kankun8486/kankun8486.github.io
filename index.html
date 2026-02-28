@@ -1,28 +1,112 @@
-[html]
-[head]
-[meta charset="UTF-8"]
-[meta name="viewport" content="width=device-width, initial-scale=1.0"]
-[title]Javien Dict - Ứng dụng tra từ vựng thông minh[/title]
-[style]
-body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
-.card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); max-width: 500px; text-align: center; margin: 20px; }
-.icon { width: 100px; height: 100px; background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); color: white; font-size: 50px; font-weight: bold; line-height: 100px; border-radius: 25px; margin: 0 auto 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-h1 { color: #2c3e50; margin: 10px 0; font-size: 2.2em; font-weight: 800; }
-p.subtitle { color: #7f8c8d; font-size: 1.1em; margin-bottom: 25px; font-weight: 500; }
-p.desc { color: #555; line-height: 1.6; margin-bottom: 35px; font-size: 1.05em; }
-.btn { display: inline-block; background: #008f68; color: #fff; text-decoration: none; padding: 16px 35px; border-radius: 50px; font-weight: bold; font-size: 1.1em; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,143,104,0.3); }
-.btn:hover { background: #007052; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,143,104,0.4); }
-.footer { margin-top: 30px; font-size: 0.9em; color: #95a5a6; border-top: 1px solid #eee; padding-top: 20px; }
-[/style]
-[/head]
-[body]
-[div class="card"]
-[div class="icon"]J[/div]
-[h1]Javien Dict[/h1]
-[p class="subtitle"]Trợ lý ngoại ngữ thông minh của bạn[/p]
-[p class="desc"]Javien Dict mang đến trải nghiệm tra cứu từ vựng siêu tốc, tự động lưu trữ lịch sử thông minh và hệ thống thông báo nhắc nhở mỗi ngày. Ghi nhớ từ vựng chưa bao giờ dễ dàng và thú vị đến thế![/p]
-[a href="https://play.google.com/store/apps/details?id=com.javien.tudien" class="btn"]Tải ngay trên Google Play[/a]
-[div class="footer"]Email hỗ trợ: email_cua_ban@gmail.com[/div]
-[/div]
-[/body]
-[/html]
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javien Dict - Ứng dụng tra từ vựng thông minh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            margin: 0; padding: 0; 
+            display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; 
+        }
+
+        .card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2); 
+            max-width: 450px; 
+            width: 90%;
+            text-align: center; 
+            margin: 20px 0;
+        }
+
+        .icon { 
+            width: 80px; height: 80px; 
+            background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); 
+            color: white; font-size: 40px; font-weight: 800; 
+            line-height: 80px; border-radius: 20px; 
+            margin: 0 auto 20px; 
+            box-shadow: 0 10px 20px rgba(78, 67, 118, 0.2); 
+        }
+
+        h1 { color: #2c3e50; margin: 0; font-size: 2.2em; font-weight: 800; }
+        p.subtitle { color: #636e72; font-size: 1.1em; margin: 10px 0 25px; font-weight: 600; }
+        
+        /* Phần chứa mã QR */
+        .qr-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 2px dashed #dfe6e9;
+        }
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        .qr-text {
+            font-size: 0.85em;
+            color: #636e72;
+            font-weight: 500;
+        }
+
+        .btn { 
+            display: block; 
+            background: #00b894; 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 16px 25px; 
+            border-radius: 15px; 
+            font-weight: 700; 
+            font-size: 1.1em; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 8px 15px rgba(0, 184, 148, 0.3); 
+        }
+
+        .btn:hover { 
+            background: #00a081; 
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 184, 148, 0.4); 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 0.85em; 
+            color: #b2bec3; 
+            border-top: 1px solid #f1f2f6; 
+            padding-top: 20px; 
+        }
+        .footer a { color: #74b9ff; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon">J</div>
+        <h1>Javien Dict</h1>
+        <p class="subtitle">Trợ lý ngoại ngữ thông minh</p>
+
+        <div class="qr-section">
+            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.javien.tudien" alt="QR Code Tải App">
+            <div class="qr-text">Quét mã để tải nhanh trên điện thoại</div>
+        </div>
+        
+        <a href="https://play.google.com/store/apps/details?id=com.javien.tudien" class="btn">
+            Tải ngay trên Google Play
+        </a>
+
+        <div class="footer">
+            Hỗ trợ: <a href="mailto:email_cua_ban@gmail.com">email_cua_ban@gmail.com</a>
+        </div>
+    </div>
+
+</body>
+</html>
