@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,35 +7,41 @@
     <title>JAVIEN Dict - Từ điển Nhật Việt</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            margin: 0; padding: 0; 
-            display: flex; justify-content: center; align-items: center; 
-            min-height: 100vh; 
+        * {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .card { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 30px; 
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2); 
-            max-width: 450px; 
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            max-width: 450px;
             width: 90%;
-            text-align: center; 
+            text-align: center;
             margin: 20px 0;
         }
 
-        /* Phần thay đổi: Cấu hình cho logo ảnh */
-        .icon-container { 
-            width: 80px; height: 80px; 
-            background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%); 
-            border-radius: 20px; 
-            margin: 0 auto 20px; 
-            box-shadow: 0 10px 20px rgba(78, 67, 118, 0.2); 
-            overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài góc bo */
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 20px rgba(78, 67, 118, 0.2);
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,12 +50,23 @@
         .icon-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Giúp ảnh khớp với khung hình vuông */
+            object-fit: cover;
         }
 
-        h1 { color: #2c3e50; margin: 0; font-size: 2.2em; font-weight: 800; }
-        p.subtitle { color: #636e72; font-size: 1.1em; margin: 10px 0 25px; font-weight: 600; }
-        
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: 800;
+        }
+
+        p.subtitle {
+            color: #636e72;
+            font-size: 1.1em;
+            margin: 10px 0 25px;
+            font-weight: 600;
+        }
+
         .qr-section {
             background: #f8f9fa;
             padding: 20px;
@@ -56,68 +74,132 @@
             margin-bottom: 25px;
             border: 2px dashed #dfe6e9;
         }
+
         .qr-code {
             width: 150px;
             height: 150px;
             margin-bottom: 10px;
         }
+
         .qr-text {
             font-size: 0.85em;
             color: #636e72;
             font-weight: 500;
         }
 
-        .btn { 
-            display: block; 
-            background: #00b894; 
-            color: #fff; 
-            text-decoration: none; 
-            padding: 16px 25px; 
-            border-radius: 15px; 
-            font-weight: 700; 
-            font-size: 1.1em; 
-            transition: all 0.3s ease; 
-            box-shadow: 0 8px 15px rgba(0, 184, 148, 0.3); 
+        .btn {
+            display: block;
+            background: #00b894;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 25px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 184, 148, 0.3);
         }
 
-        .btn:hover { 
-            background: #00a081; 
+        .btn:hover {
+            background: #00a081;
             transform: translateY(-3px);
-            box-shadow: 0 12px 20px rgba(0, 184, 148, 0.4); 
+            box-shadow: 0 12px 20px rgba(0, 184, 148, 0.4);
         }
 
-        .footer { 
-            margin-top: 30px; 
-            font-size: 0.85em; 
-            color: #b2bec3; 
-            border-top: 1px solid #f1f2f6; 
-            padding-top: 20px; 
+        .footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #636e72;
+            border-top: 1px solid #f1f2f6;
+            padding-top: 20px;
         }
-        .footer a { color: #74b9ff; text-decoration: none; font-weight: 600; }
+
+        .footer a {
+            color: #0984e3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .legal-links a {
+            font-size: 0.9em;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            font-size: 0.8em;
+            color: #95a5a6;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="card">
+
         <div class="icon-container">
-            <img src="logo.png" alt="Javien Logo">
+            <img src="logo.png" alt="JAVIEN Dict Logo">
         </div>
 
         <h1>JAVIEN Dict</h1>
-        <p class="subtitle">Từ điển Nhật Việt tra cứu thông minh</p>
+
+        <p class="subtitle">
+            Từ điển Nhật Việt tra cứu thông minh
+        </p>
 
         <div class="qr-section">
-            <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store/apps/details?id=com.javien.tudien" alt="QR Code Tải App">
-            <div class="qr-text">Quét mã để tải nhanh trên điện thoại</div>
+            <img
+                class="qr-code"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.javien.tudien"
+                alt="QR Code Tải App"
+            >
+            <div class="qr-text">
+                Quét mã để tải nhanh trên điện thoại
+            </div>
         </div>
-        
-        <a href="https://play.google.com/store/apps/details?id=com.javien.tudien" class="btn">
+
+        <a
+            href="https://play.google.com/store/apps/details?id=com.javien.tudien"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
             Tải ngay trên Google Play
         </a>
 
         <div class="footer">
-            Hỗ trợ: <a href="mailto:kankun8486@gmail.com">kankun8486@gmail.com</a>
+
+            <div>
+                Hỗ trợ:
+                <a href="mailto:kankun8486@gmail.com">
+                    kankun8486@gmail.com
+                </a>
+            </div>
+
+            <div class="legal-links">
+                <a href="terms.html">
+                    Điều khoản dịch vụ (Terms of Service)
+                </a>
+            </div>
+
+            <div class="copyright">
+                © 2026 KANKUN DEV. All rights reserved.
+            </div>
+
         </div>
+
     </div>
 
 </body>
